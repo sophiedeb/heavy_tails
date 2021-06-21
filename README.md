@@ -8,4 +8,6 @@ Figure numbers refer to the first version of the article on Biorxiv.
 
 One notebook reproduces all figures from the main article and the other one is an example code to generate results of the analyses of simulations stored in the results folder. Experimental data is available is the folder data. 
 
-The most important codes are timeseries_glv and timeseries_ibm which actually generate the timeseries. 
+The most important codes are Timeseries_glv and Timeseries_ibm which actually generate the timeseries. 
+
+This repository is a simplified version of https://github.com/lanadescheemaeker/rank_abundance. 
