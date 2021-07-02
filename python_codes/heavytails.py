@@ -123,8 +123,10 @@ def plot_heavytail(input_ra, params, ax=None, func='lognorm', add_label=True,
     else:
         raise ValueError('Scale of x-axis not known: %s' % xscale)
 
-    hist = ax.hist(ra, alpha=0.2, density=True, bins=bins, color='grey')#plotting the histogram
-
+    hist = ax.hist(ra, alpha=0.2, density=True, bins=bins, color='grey') #plotting the histogram
+    #following two lines were there to check normalization
+    #mybins = [bins[kkk+1]-bins[kkk] for kkk in range(len(bins)-1)]
+    #print('normalisation?',np.dot(hist[0],mybins))
     bin_heights = hist[0]
 
     cmap = plt.cm.get_cmap('coolwarm')
