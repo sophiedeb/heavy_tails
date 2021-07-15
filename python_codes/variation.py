@@ -9,7 +9,6 @@ def variation_coefficient(ts):
 
     d = ts.drop('time', axis=1)
     x = d.mean(axis=0)
-    print(x)
     y = d.std(axis=0) / x
     return np.mean(y), np.std(y), np.min(y), np.max(y)
 

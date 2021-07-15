@@ -2,7 +2,7 @@ from scipy import stats
 import numpy as np
 import matplotlib.pyplot as plt
 
-
+import sys
 from python_codes.piecewise_normalizations import PiecewiseLogNorm, PiecewiseNormalize
 #from python_codes.powerlaw import *
 
@@ -75,7 +75,9 @@ def fit_heavytail(input_ra, func='lognorm', discrete=False):
         results = Fit(ra, xmin=np.min(ra), xmax=np.max(ra)) #todo powerlaw.Fit
         
         alpha = - results.alpha #todo was: results.power_law.alpha
-        print('alpha for powerlaw is ',alpha)
+        if False: 
+            print('hello')
+            print('alpha for powerlaw is ',alpha)
         def cdf(x):
             rescale = (alpha + 1) * 1 / (np.max(ra) ** (alpha + 1) - np.min(ra) ** (alpha + 1))
             y = rescale * (x ** (alpha + 1) - np.min(ra) ** (alpha + 1)) / (alpha + 1)
